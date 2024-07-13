@@ -18,18 +18,18 @@ This theory focuses on choosing the most optimal decision, depending on the cont
 Game theory studies situations in which different agents could have an effect, also in an “unstable environment” where the situation could be affected by the different participating agents, it analyzes the way the agents could perform in the different cases or phases of what the game theory could be taking part in, it always takes into account what could affect the situation or alter it, and in the way that this relates to decision theory is that both theories could be or are affected by the decisions the other participants or agents could make in a situation.
 
 ## 2. Schnapsen
-Schnapsen is a two-player trick-playing card-based strategy game [1][1]. The aim of the game is for each player to surpass his opponent's points or be the first one to reach a total of 66 points.
+Schnapsen is a two-player trick-playing card-based strategy game [1]. The aim of the game is for each player to surpass his opponent's points or be the first one to reach a total of 66 points.
 There is a number of variants to Schnapsen, however, in our version, a deck consists of the five highest valued cards of every suit (e.g. 10, J, Q, K, A). Hence, the deck consists of a total of 20 cards.
 The game begins with the top card of the stock getting revealed to both players as the trump card, which we will discuss in more detail later on. Each player then draws 5 cards, which are hidden from their opponent. To begin a new round, each player plays one of their cards in the trick and the card with the highest value wins the trick. A card with the same suit as the trump card is considered higher value than any of the other cards. For example, if the trump card suit is ‘Spades’, then a ‘10 of Spades’ will always win over an ‘Ace’ of any other suit. The winner of the trick receives the sum of the points from the trick (Aces = 11, Ten = 10, King = 4, Queen = 3 and Jack = 2), each player restores their hand back to 5 cards by drawing from the stock and the next trick can then be played.
-A player can also perform some special moves [1][1], namely a “marriage” or a “trump-jack exchange”. A “marriage” can be performed when a player has both the Queen and the King of the same suit. The player then shows the two cards and plays one of them, resulting in the trick gaining an additional 20 points for the winner, increased to 40 if the Queen and King are of the trump suit. Moreover, a “trump-jack exchange” can be performed only if a player holds the trump jack. They can then switch the trump jack with the current trump prior to any other actions. An additional rule is that when the stock runs out of cards, then both players have to make their cards known.
+A player can also perform some special moves [1], namely a “marriage” or a “trump-jack exchange”. A “marriage” can be performed when a player has both the Queen and the King of the same suit. The player then shows the two cards and plays one of them, resulting in the trick gaining an additional 20 points for the winner, increased to 40 if the Queen and King are of the trump suit. Moreover, a “trump-jack exchange” can be performed only if a player holds the trump jack. They can then switch the trump jack with the current trump prior to any other actions. An additional rule is that when the stock runs out of cards, then both players have to make their cards known.
 
 ## 3. Research question
 In this paper, we attempt to answer the question if we can approximate a perfect information game through means of informed predictions and mathematical abstraction, which are reinforced by Sims tables and permutation sets. We also try to prove whether this strategy can be applied in-game and how efficient it can be, by applying different methods. 
 
 ## 4. Intelligent Agents
 ### 4.1 Mantis
-When we observed how human players play card games, we noticed that they usually tend to play around the cards that have not been observed yet and have a moderately high chance of being played. As mentioned by Wisser [2][2], expert players are able to consider “multiple partially fixed worlds across the possibilities” and they can perceive, which world would be most likely to win them the game. Advanced players usually have a better, informed guess due to the experience factor resulting in a minimum 10 world prediction.
-Our bot, which we called mantis after the Greek word for prophet, is an intelligent predictive agent which attempts to do just that. It creates the entire state space tree and then searches for the highest probable opponents hand. Under normal circumstances, the time complexity of an algorithm that traverses the entire state space would be too large, however, this can be done more efficiently with the use of a variant of permutation tables, mentioned by Sims [3][3]. Sims tables are an algebraic abstraction that helps us in the organization of all the different worlds.
+When we observed how human players play card games, we noticed that they usually tend to play around the cards that have not been observed yet and have a moderately high chance of being played. As mentioned by Wisser [2], expert players are able to consider “multiple partially fixed worlds across the possibilities” and they can perceive, which world would be most likely to win them the game. Advanced players usually have a better, informed guess due to the experience factor resulting in a minimum 10 world prediction.
+Our bot, which we called mantis after the Greek word for prophet, is an intelligent predictive agent which attempts to do just that. It creates the entire state space tree and then searches for the highest probable opponents hand. Under normal circumstances, the time complexity of an algorithm that traverses the entire state space would be too large, however, this can be done more efficiently with the use of a variant of permutation tables, mentioned by Sims [3]. Sims tables are an algebraic abstraction that helps us in the organization of all the different worlds.
 Each world consists of a different permutation of the opponent possible hand as a tuple of five cards. Therefore, our Sims table contains every possible world in a tuple format, as described by Knuth [5]. We further simplify the cards by representing their suit and rank as a single integer, the card’s index. We then trim our data by removing repeating worlds as the order of the cards is no longer needed in our calculations.
 During run-time, whenever a card is revealed - either when the trump-card is shown, when we receive cards or when a card is played by the opponent - the algorithm will update the Sims table by removing the subset of worlds where an instance of the observed card exists in.
 To predict the opponent's hand, a list of all unseen cards is compared to our permutation table and the sum of worlds, where an instance of that specific card is observed in, is calculated. This value is then divided by the total number of worlds in the permutation table and appended to a probability matrix as a tuple of an integer and a float, which represent the card index and the probability of the card being in the opponent's hand respectively. Finally, the probability matrix is sorted and the five most probable cards are selected as a prediction to the opponent's hand.
@@ -83,32 +83,27 @@ Taking into consideration the aforementioned tests, we can conclude that our Int
 From our experiment and findings, we can conclude that the Intelligent Agent we created, Mantis, can be fairly accurate when predicting from one up to the total number of cards the opponent has in hand. We also realize that for this system to be completely accurate, we would need further research on the topic and a better implementation of the code. Overall, we were able to find an answer to our question but we are aware that the bot could be further implemented.
 
 ## 9. References
-[1]: F. Wisser. (2010) Resources on the card game Schnapsen. [Online].
-Available: http://www.dbai.tuwien.ac.at/user/wisser/schnapsen/
+[1] F. Wisser. (2010) Resources on the card game Schnapsen. [Online]. Available: http://www.dbai.tuwien.ac.at/user/wisser/schnapsen/
 
-[2]: F. Wisser; “Creating Possible Worlds Using Sims Tables for the
-Imperfect Information Card Game Schnapsen”; Vienna University of Technology 2010; 22nd International Conference on Tools with Artificial Intelligence
+[2] F. Wisser; “Creating Possible Worlds Using Sims Tables for the Imperfect Information Card Game Schnapsen”; Vienna University of Technology 2010; 22nd International Conference on Tools with Artificial Intelligence
 
-[3]: C. C. Sims, Computational Methods in Abstract Algebra. Oxford:
-Pergamon, 1970.
+[3] C. C. Sims, Computational Methods in Abstract Algebra. Oxford: Pergamon, 1970.
 
-[4]: D. E. Knuth, The Art of Computer Programming, Volume 4, Fascicle 2:
-Generating All Tuples and Permutations. Addison-Wesley Professional,
-2005.
+[4] D. E. Knuth, The Art of Computer Programming, Volume 4, Fascicle 2: Generating All Tuples and Permutations. Addison-Wesley Professional, 2005.
 
-[5]: N. Muscettola, P. Nayak, B.Pell and B. Williams, Remote Agent: to boldly go where no AI system has gone before; [...], 1998
+[5] N. Muscettola, P. Nayak, B.Pell and B. Williams, Remote Agent: to boldly go where no AI system has gone before; [...], 1998
 
-[6]: S. Schlobach, Intelligent Systems Course; Vrije Universiteit Amsterdam, 2019.
+[6] S. Schlobach, Intelligent Systems Course; Vrije Universiteit Amsterdam, 2019.
 
-[7]: M. Wooldridge, Does Game Theory Work?; University of Oxford, 2012
+[7] M. Wooldridge, Does Game Theory Work?; University of Oxford, 2012
 
-[8]: S. Parsons, M. Wooldridge, Game Theory and Decision Theory in Multi-Agent Systems; University of Liverpool, 2002
+[8] S. Parsons, M. Wooldridge, Game Theory and Decision Theory in Multi-Agent Systems; University of Liverpool, 2002
 
-[9]: B. Bhuiyan, “An Overview of Game Theory and Some Applications”, PP, vol. 59, no. 1-2, pp. 111-128, Aug. 2018.
+[9] B. Bhuiyan, “An Overview of Game Theory and Some Applications”, PP, vol. 59, no. 1-2, pp. 111-128, Aug. 2018.
 
-[A]: H. Raiffa, Decision Analysis: Introductory Lectures on Choices under Uncertainty, Addison Wesley: Reading, MA, 1968
+[A] H. Raiffa, Decision Analysis: Introductory Lectures on Choices under Uncertainty, Addison Wesley: Reading, MA, 1968
 
-Appendix A
+## Appendix A
 Mantis:
 
 
