@@ -1,4 +1,4 @@
-# Mastering Schnapsen by Means of Mathematical Abstraction and Tactical Decision Making
+# Beating the Game of Schnapsen by Means of Mathematical Abstraction and Tactical Decision Making
 ## Vrije Universiteit Amsterdam | Intelligent Systems 2019
 
 ### Abstract
