@@ -57,7 +57,7 @@ The following graph shows the accuracy of the card predictions made by ‘Mantis
 
 ![Figure 6.1.1](./pictures/fig1.png)
 
-<img src="./pictures/fig1.png" alt="Italian Trulli">
+<img src="./pictures/fig1.png" alt="Figure 6.1.1" align=center>
 
 From Figure 6.1.1 we can deduce that the accuracy of our intelligent agent is greatly increased after the 3rd round. On the other hand, in the first and second round, the results are below average, with the bot being able to correctly predict at most two cards from the opponent's hand. 
 
