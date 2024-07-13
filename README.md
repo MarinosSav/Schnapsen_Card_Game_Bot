@@ -1,6 +1,8 @@
-<style type="text/css" style="display: none">
-    /* Some CSS */
-</style>
+<body>
+	<style type="text/css" style="display: none">
+    		/* Some CSS */
+	</style>
+</body>
 
 # Mastering Schnapsen by Means of Mathematical Abstraction and Tactical Decision Making
 ## Vrije Universiteit Amsterdam | Intelligent Systems 2019
