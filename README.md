@@ -120,7 +120,7 @@ From our experiment and findings, we can conclude that the Intelligent Agent we 
 [A] H. Raiffa, Decision Analysis: Introductory Lectures on Choices under Uncertainty, Addison Wesley: Reading, MA, 1968
 
 ## Appendix A
-Mantis:
+Mantis: https://github.com/MarinosSav/Schnapsen_bot/blob/main/mantis.py
 
 
 
