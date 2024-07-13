@@ -57,7 +57,7 @@ The following graph shows the accuracy of the card predictions made by ‘Mantis
 
 <figure>
   <img src="./pictures/fig1.png" alt="Figure 6.1.1">
-  <figcaption>Fig. 6.1.1</figcaption>
+  <figcaption style="text-align:center">Fig. 6.1.1</figcaption>
 </figure>
 
 
