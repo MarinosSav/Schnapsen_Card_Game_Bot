@@ -9,7 +9,7 @@ We explain what Schnapsen consists of and what are the rules and plays on this �
 **Keywords**: Computer Science, Schnapsen, Imperfect information, Game theory, Decision theory, Predictive Model, Artificial Intelligence, State Space Search, Uninformed search, Intelligent agents, Bots, Tree search, Sims tables, Permutation tables, Mathematical Abstraction
 
 ## 1. Introduction
-Over the last three decades, the field of Artificial Intelligence, and specifically the branch of Intelligent Systems was not only able to reach remarkable goals, but it has also become a part of everyday life: from the “pure” scientific field, such as Remote Agent, which was able to manage a spacecraft domain [5], to more “simple” systems, such as modern thermostats, and even in popular culture. Intelligent Systems have an effect on everyday life and they are becoming more and more useful for society. 
+Over the last three decades, the field of Artificial Intelligence, and specifically the branch of Intelligent Systems was not only able to reach remarkable goals, but it has also become a part of everyday life: from the “pure” scientific field, such as Remote Agent, which was able to manage a spacecraft domain [][5], to more “simple” systems, such as modern thermostats, and even in popular culture. Intelligent Systems have an effect on everyday life and they are becoming more and more useful for society. 
 Another common field where Intelligent Systems can be applied on is games. Even if it may not sound as astounding, games represent an excellent example to thoroughly understand the basics of Intelligent Systems. Among the many ways that they can be used to develop such systems, we have the group represented by Rational Agents, which can be implemented using four main different approaches: model-based reflex agents, utility-based agents, goal-based agents, and simple reflex agents [6]. 
 In this paper, we are going to focus on model-based agents, in particular, those that can be developed using game theory, which “[...] was introduced in the last century by mathematicians and economists as a tool to analyze both economic competition and political conflicts.”[9]
 Moreover, as described by Wooldridge [7], in game theory, a game can be considered “an abstract mathematical model of a multi-agent decision-making setting”
@@ -56,6 +56,66 @@ Likewise, we will use the same 10 games to evaluate the consistency of our bot b
 The following graph shows the accuracy of the card predictions made by ‘Mantis’ per round. On the x-axis, we can see the individual rounds and on the y-axis the number of cards accurately predicted. Every round is averaged throughout all 10 games - for a breakdown of all 10 games check appendix A, figure I - and then plotted in the aforementioned coordinate axis.
 
 ![image info](./pictures/fig1.png)
+
+From Figure 6.1.1 we can deduce that the accuracy of our intelligent agent is greatly increased after the 3rd round. On the other hand, in the first and second round, the results are below average, with the bot being able to correctly predict at most two cards from the opponent's hand. 
+
+Figures 6.1.2 and 6.1.3 show the different trials of games we have made to test Mantis. These graphs show the number of cards Mantis has predicted in the first five rounds of each game. In the graphs, it can be appreciated that our intelligent agent always predicts a minimum of one card in the opponent's hand and a maximum of 5. 
+
+Fig. 6.1.2
+
+Fig. 6.1.3
+
+Fig. 6.1.4 shows the consistency of the predictive intelligent agent by averaging the number of correct cards predicted per round. On the x-axis, we can see the 10 independent games and, on the y-axis, the mean number of cards predicted correctly.
+
+Fig. 6.1.4
+
+As we can observe, the average number of cards seem to oscillate between two and three cards with one outlier in game 6, where four cards were predicted accurately on average. It is apparent that the intelligent agent's prediction is not optimal, however, it can perform sufficiently.
+Our final test was a tournament between the three bots RDeep, Bully and Mantis/Anti-Bully.  To have an accurate representation of the performance of the bots, we played 100 games between each pair of bots. Fig. 6.1.5 shows the results of this tournament.
+
+Fig. 6.1.4
+
+From the tournament results, we can observe that Mantis/Anti-Bully can beat Bully, however, it struggles against RDeep. From this, we can deduct that our proposed algorithm can perform better than an average player, but is not as good as an expert level player.
+
+## 7. Findings
+Taking into consideration the aforementioned tests, we can conclude that our Intelligent Agent can perform averagely when predicting the opponent’s cards and can more accurately predict cards after the third round. Moreover, it can predict a minimum of two cards per game on a consistent basis and can compete in the game of Schnapsen with an Intermediate human player.
+
+## 8. Conclusion
+From our experiment and findings, we can conclude that the Intelligent Agent we created, Mantis, can be fairly accurate when predicting from one up to the total number of cards the opponent has in hand. We also realize that for this system to be completely accurate, we would need further research on the topic and a better implementation of the code. Overall, we were able to find an answer to our question but we are aware that the bot could be further implemented.
+
+## 9. References
+[1] F. Wisser. (2010) Resources on the card game Schnapsen. [Online].
+Available: http://www.dbai.tuwien.ac.at/user/wisser/schnapsen/
+
+[2] F. Wisser; “Creating Possible Worlds Using Sims Tables for the
+Imperfect Information Card Game Schnapsen”; Vienna University of Technology 2010; 22nd International Conference on Tools with Artificial Intelligence
+
+[3] C. C. Sims, Computational Methods in Abstract Algebra. Oxford:
+Pergamon, 1970.
+
+[4] D. E. Knuth, The Art of Computer Programming, Volume 4, Fascicle 2:
+Generating All Tuples and Permutations. Addison-Wesley Professional,
+2005.
+
+[5] N. Muscettola, P. Nayak, B.Pell and B. Williams, Remote Agent: to boldly go where no AI system has gone before; [...], 1998
+
+[6]S. Schlobach, Intelligent Systems Course; Vrije Universiteit Amsterdam, 2019.
+
+[7] M. Wooldridge, Does Game Theory Work?; University of Oxford, 2012
+
+[8] S. Parsons, M. Wooldridge, Game Theory and Decision Theory in Multi-Agent Systems; University of Liverpool, 2002
+
+[9] B. Bhuiyan, “An Overview of Game Theory and Some Applications”, PP, vol. 59, no. 1-2, pp. 111-128, Aug. 2018.
+
+[A] H. Raiffa, Decision Analysis: Introductory Lectures on Choices under Uncertainty, Addison Wesley: Reading, MA, 1968
+
+Appendix A
+Mantis:
+
+
+
+
+
+
 
 
 
