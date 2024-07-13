@@ -55,7 +55,7 @@ Likewise, we will use the same 10 games to evaluate the consistency of our bot b
 ## 6. Results
 The following graph shows the accuracy of the card predictions made by ‘Mantis’ per round. On the x-axis, we can see the individual rounds and on the y-axis the number of cards accurately predicted. Every round is averaged throughout all 10 games - for a breakdown of all 10 games check appendix A, figure I - and then plotted in the aforementioned coordinate axis.
 
-<img align=center> ![image info](./pictures/fig1.png) </img>
+![Figure 6.1.1](./pictures/fig1.png)
 
 From Figure 6.1.1 we can deduce that the accuracy of our intelligent agent is greatly increased after the 3rd round. On the other hand, in the first and second round, the results are below average, with the bot being able to correctly predict at most two cards from the opponent's hand. 
 
