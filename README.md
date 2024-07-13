@@ -65,18 +65,30 @@ From Figure 6.1.1 we can deduce that the accuracy of our intelligent agent is gr
 
 Figures 6.1.2 and 6.1.3 show the different trials of games we have made to test Mantis. These graphs show the number of cards Mantis has predicted in the first five rounds of each game. In the graphs, it can be appreciated that our intelligent agent always predicts a minimum of one card in the opponent's hand and a maximum of 5. 
 
-Fig. 6.1.2
+<div align=center>
+  <img src="./pictures/fig2.png" alt="Figure 6.1.2" style="align:center">
+  <p><i>Fig. 6.1.2</i></p>
+</div>
 
-Fig. 6.1.3
+<div align=center>
+  <img src="./pictures/fig3.png" alt="Figure 6.1.3" style="align:center">
+  <p><i>Fig. 6.1.3</i></p>
+</div>
 
 Fig. 6.1.4 shows the consistency of the predictive intelligent agent by averaging the number of correct cards predicted per round. On the x-axis, we can see the 10 independent games and, on the y-axis, the mean number of cards predicted correctly.
 
-Fig. 6.1.4
+<div align=center>
+  <img src="./pictures/fig4.png" alt="Figure 6.1.4" style="align:center">
+  <p><i>Fig. 6.1.4</i></p>
+</div>
 
 As we can observe, the average number of cards seem to oscillate between two and three cards with one outlier in game 6, where four cards were predicted accurately on average. It is apparent that the intelligent agent's prediction is not optimal, however, it can perform sufficiently.
 Our final test was a tournament between the three bots RDeep, Bully and Mantis/Anti-Bully.  To have an accurate representation of the performance of the bots, we played 100 games between each pair of bots. Fig. 6.1.5 shows the results of this tournament.
 
-Fig. 6.1.4
+<div align=center>
+  <img src="./pictures/fig5.png" alt="Figure 6.1.5" style="align:center">
+  <p><i>Fig. 6.1.5</i></p>
+</div>
 
 From the tournament results, we can observe that Mantis/Anti-Bully can beat Bully, however, it struggles against RDeep. From this, we can deduct that our proposed algorithm can perform better than an average player, but is not as good as an expert level player.
 
