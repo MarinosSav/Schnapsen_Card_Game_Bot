@@ -1,3 +1,13 @@
+<style>
+        .container {
+          display: flex;
+          width: 100%;
+          height: 300px;
+          background-color: black;
+          color: white;
+        }
+</style>
+
 # Mastering Schnapsen by Means of Mathematical Abstraction and Tactical Decision Making
 ## Vrije Universiteit Amsterdam | Intelligent Systems 2019
 
@@ -108,11 +118,6 @@ From our experiment and findings, we can conclude that the Intelligent Agent we 
 
 ## Appendix A
 Mantis:
-
-
-
-
-
 
 
 
