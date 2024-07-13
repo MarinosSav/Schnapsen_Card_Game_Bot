@@ -56,7 +56,7 @@ Likewise, we will use the same 10 games to evaluate the consistency of our bot b
 The following graph shows the accuracy of the card predictions made by ‘Mantis’ per round. On the x-axis, we can see the individual rounds and on the y-axis the number of cards accurately predicted. Every round is averaged throughout all 10 games - for a breakdown of all 10 games check appendix A, figure I - and then plotted in the aforementioned coordinate axis.
 
 <figure>
-  <img src="./pictures/fig1.png" alt="Figure 6.1.1" align=center>
+  <img src="./pictures/fig1.png" alt="Figure 6.1.1" align=center></img>
   <figcaption>Fig. 6.1.1</figcaption>
 </figure>
 
